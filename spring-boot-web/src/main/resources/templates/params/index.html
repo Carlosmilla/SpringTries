@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enviar parametros request http get-url</title>
+</head>
+<body>
+	<ul>             <!-- se asigna la url con el valor del objeto -->
+		<li><a th:href="@{/params/string(texto='hola pepe')}">/params/string?texto=hola
+				pepe</a></li> 
+		<li><a th:href="@{/params/string(texto='Que tal pepa')}">/params/string?texto=Que <!-- esta escrito asi para que sea literal, no es necesario -->
+				tal pepa</a></li>
+				<li><a th:href="@{/params/mix-params(saludo='Que tal papo', numero=7)}">/params/mix-params <!-- esta escrito asi para que sea literal, no es necesario -->
+				</a></li>
+	</ul>
+	<!-- el @{} siempre se usa en rutas propias del proyecto en thymeleaf, ya sean controladores o metodos handler
+	recursos como stylesheets, imagenes o js -->
+</body>
+</html>
